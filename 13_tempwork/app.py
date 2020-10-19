@@ -1,8 +1,7 @@
-# Team Tiny Elephant (Jeffrey Huang, Erin Lee, Jonathan Lee)
-# SoftDev
-# K10 -- Putting Little Pieces Together
-# Looked at solutions for 07_py-csv.py, and amalgamated a simpler/better version of the occupations.py and integrated it with the app.py.
-# 2020-10-13
+#Team Owl (Constance Chen, Winnie Huang, Erin Lee)
+#SoftDev -- Rona Ed.
+#K13: Template for Success: Using templating/jinja/flask, re-do the occupations assignment integrating python and HTML.
+#Due Oct 19 2020 
 from flask import Flask, render_template
 import csv
 import random
