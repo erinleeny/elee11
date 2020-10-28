@@ -1,0 +1,16 @@
+MongoDB Notes
+
+Introduction
+> MongoDB is a NoSQL database: doesn’t use related tables (no rows or columns) and stores in collections
+> collection: organized store, usually with common fields between documents
+
+Cloud
+> Atlas cloud database: Mongo used at its core
+> deploy clusters: group of servers that stores your data
+> replica set: a few connected machines that store the same data to ensure data remains intact (backup)
+
+> JSON: the document format (key: value, key: value})
+	> readable, friendly, familiar
+	> text-based, space-consuming, limited
+> BSON: binary JSON, optimized
+> Anything in JSON can be viewed in Mongo! Mongo stores data as BSON, but users view it in JSON

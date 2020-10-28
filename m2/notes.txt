@@ -1,0 +1,28 @@
+MongoDB Notes
+
+Exporting/Importing
+> exported as BSON, viewed as JSON
+> mongodump — uri 
+	> exports in BSON
+> mongoexport —uri
+		   —collection
+		   —out
+	> exports in JSON
+> mongorestore —uri
+		    —drop
+	> imports in BSON
+> mongoimport —uri
+		    —drop
+	> imports in JSON
+
+Data Exploring
+> show dis
+> use sample_training
+> show collections
+> db.<collection_name>.find({<JSON filter>})
+> view next
+	> “it”, iterate the cursor
+> .count()
+	> returns length of the query
+> .pretty()
+	> makes the JSON returned more readable
