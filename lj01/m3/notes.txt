@@ -1,0 +1,34 @@
+Erin Lee (Michelle Thaung, Alvin Wu)
+SoftDev
+LJ01: Le Voyage de Learnination avec Mongo, Deuxième Phase--Notes from Chapter 3
+2020-11-12
+
+Inserting New Documents
+> _id is already populated
+	> ObjectId(), the default but can be filled in
+> some data types: string, int, address (object), date
+> duplicate key error for inserting the same document with the same id
+> drop can be appended to remove the entry before inserting another
+> .findOne() 
+	> returns one of the query
+> you can have identical query as long as the _id is different
+
+Inserting Multiple Documents
+> .insert([{}, {}, {}]) JSONs in an array
+> default behavior: ordered = true
+	> documents inserted in the order they are in
+	> documents after the insertion errors will not be added/inserted if set to true instead of false
+> MongoDB lets you easily create new collections, db.<new db>.insert()
+
+Updating Documents
+> one: updateOne(), findOne(), deleteOne()
+> many: updateMany(), find(), deleteMany()
+> db.zips.updateMany({"city": "HUDSON"}, {"$inc": {"pop": 10}})
+> format: filter/query, type of change/update, affected fields
+> $inc: increment, $set: set value (won't error with mistype, implicit creation), $push: add element <field1>: <value1>
+	> "$push": {"scores": {"type": "extra credit"}}
+
+Deleting Documnts and Collections
+> deleteOne - only use with __id 
+> deleteMany({"test": 3})
+> delete collection: --drop	or db.collection.drop()

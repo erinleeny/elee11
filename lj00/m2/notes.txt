@@ -1,4 +1,7 @@
-MongoDB Notes
+Erin Lee (Michelle Thaung, Alvin Wu)
+SoftDev
+LJ00: Le Voyage de Learnination avec Mongo, Première Phase--Notes from Chapter 2
+2020-10-29
 
 Exporting/Importing
 > exported as BSON, viewed as JSON

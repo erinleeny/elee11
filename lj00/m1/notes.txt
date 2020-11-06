@@ -1,4 +1,8 @@
-MongoDB Notes
+Erin Lee (Michelle Thaung, Alvin Wu)
+SoftDev
+LJ00: Le Voyage de Learnination avec Mongo, Première Phase--Notes from Chapter 1
+2020-10-29
+
 
 Introduction
 > MongoDB is a NoSQL database: doesn’t use related tables (no rows or columns) and stores in collections
