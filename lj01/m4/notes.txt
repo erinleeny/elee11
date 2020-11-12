@@ -3,6 +3,36 @@ SoftDev
 LJ01: Le Voyage de Learnination avec Mongo, Deuxième Phase--Notes from Chapter 4
 2020-11-12
 
->
->
->
+> Comparison Operators: allow to find data within a certain range
+    > $ is used: $eq, $neq, $gt, $lt, $gte, $lte
+    > <field>: {<operator>: <value>}
+    > "tripduration": {"$lte": 70}
+
+> Logic Operators
+    > $and, $or, $nor, $not
+    > either {<operator>: [{statement}, {statement}]} or {$not: {statement}}
+    > and is the default operator when not specified {{statement}, {statement}}, <field>: {value, value}
+    > explicitly use when you need to use the same operator more than once in a query
+
+> Expressive Query Operator
+    > $expr allows the use of aggregation expressions, variable, conditional statements
+    > {$expr: {<expression>}}
+    > $ addreses the field value
+    > {$expr: {"$eq": ["$start station id", "$end station id"]}}
+    > db.trips.find({ "$expr": { "$and": [ { "$gt": [ "$tripduration", 1200 ]}, { "$eq": [ "$end station id", "$start station id" ]}]}}).count()
+
+> Array Operators
+    > $push, $size, $all
+    > order of array elements matter when querying with an array
+    > db.listingsAndReviews.find({ "amenities": { "$size": 20}).pretty()
+
+> Array Operators and Projection 
+    > 1 - include, 0 - exclude
+    > use only 1s or 0s, only mix when using _id, which is included by default
+    > .find({<query}, {<projection>})
+    > {"price": 1, "address": 1}
+    > {$elemMatch": {"$gt":85}} -- if in the projection section, will only pop up when matches
+
+> Array Operators and Sub-Documents
+    > dot notation: "start station location.type": "point"
+    > "relationships.0.person.last_name"
