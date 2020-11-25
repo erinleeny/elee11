@@ -1,0 +1,18 @@
+Erin Lee (Michelle Thaung, Alvin Wu) MEA
+SoftDev
+LJ02: Le Voyage de Learnination avec Mongo, Troisième Phase-Notes from Chapter 6
+2020-11-25
+
+Data Explorer
+> can export pipeline to language
+> order matters for different query functions/methods
+
+Realm - offers services for web/mobile applications
+Charts - dynamic data visualizations
+
+MongoDB Compass
+> connect to atlas using Compass
+> JSON, table, query format, filter, project, sort, collation filter options, export query, create indexes
+> analyzes schema to see overview/shape of your documents
+> explain plan: query performance, additional documents looked at
+> validation: restrictions for data, {homepage_url: "String"}, $type: 'string'

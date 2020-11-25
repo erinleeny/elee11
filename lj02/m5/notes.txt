@@ -1,0 +1,43 @@
+Erin Lee (Michelle Thaung, Alvin Wu) MEA
+SoftDev
+LJ02: Le Voyage de Learnination avec Mongo, Troisième Phase--Notes from Chapter 5
+2020-11-25
+
+> aggregate framework
+db.listingAndReviews.aggregate([
+    {$match: {}}
+    {$project: {}}
+])
+> first filter: match stage, second filter: project stage
+> documents that match first, project second
+$group: an operator that takes the incoming stream of data, and siphons it into multiple distinct reservoirs
+{ $group:
+    {
+        _id: "$address.country",
+        <field 1>: {<accum>: <expression1>},
+        ...
+    }}
+db.listingsAndReviews.aggregate([
+    { "$project": { "address": 1, "_id": 0 }},
+    { "$group": { "_id": "$address.country",
+        "count": { "$sum": 1 } } }
+])
+
+sort() and limit()
+
+db.zips.find().sort({ "pop": 1 }).limit(1)
+. 1: lowest to highest, -1: highest to lowest
+> applied to result set that lives in the cursor
+
+Indexes
+> special data structure that stores a small portion of the collection's data set in an easy form
+db.trips.createIndex({ "birth year": 1 })
+> streamlines db.trips.find({ "birth year": 1989 }), avoids sorting
+
+Data Modeling
+> data is stored in the way it is used
+> data that is used together should be stored together
+
+Upsert
+> { "upsert": true } at end of line, must be turned on
+> conditional updating/inserting
