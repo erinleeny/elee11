@@ -7,6 +7,7 @@
 > request.method gets you the type of method (GET, POST)
 > restricting methods to 'POST' gives us "Method not allowed" printed on the response page (even if we change request.args to request.form).
 > can't test POST, the form/response only works with GET with what we have.
+> changing the HTML for the input to include method="POST" will allow us to use the "POST" request and not "GET"
 
 print(app)
     expected output: the name of the app
