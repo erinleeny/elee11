@@ -1,0 +1,13 @@
+#Team MEH (May Hathaway, Erin Lee)
+#SoftDev -- Rona Ed.
+#K18: Filler and Finery, CSS exercises in 3 ways
+#Due Jan 14 2021
+
+> Lorem Ipsum generator: https://www.lipsum.com/ 
+> You can use font-weight to specify boldness instead of the <b> tag
+> We learned how to put two sections of a page on the same line instead of one below the other using divs and the display attribute
+> You can also remove the underline of a link!
+> Writing CSS externally or internally rather than inline allows you to avoid repeating style attributes for the same type of text or element
+> To transition from inline to internal, we transferred all our inline styles into the <style> section, removed them from the HTML body, and made sure to give ids whenever needed to match the style sectionn
+> 
+> Some lingering questions 
